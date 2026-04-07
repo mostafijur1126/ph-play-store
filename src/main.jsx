@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import RootLayout from './layout/RootLayout';
 import Apps from './Component/pages/apps/Apps';
 import InstalledApps from './Component/pages/installedApps/InstalledApps';
+import Notfound from './Component/pages/notFound/Notfound';
+import HomePage from './Component/pages/homePage/HomePage';
 
 
 
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
     children:[
       {
         index:true,
-        element: <h3>home</h3>
+        Component: HomePage
       },
       {
         path: "/apps",
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
         Component: InstalledApps
       }
     ],
-    errorElement: <h6>This page is not found</h6>
+    errorElement: <Notfound></Notfound>
   },
 ]);
 
