@@ -26,7 +26,7 @@ const Navbar = () => {
                     className='h-10' /></div>
                 <div className='hidden md:flex items-center gap-6 lg:gap-8'>
                     {
-                        navItems.map((item)=><MyNavlink to={item.path}>{item.text}</MyNavlink>)
+                        navItems.map((item, i)=><MyNavlink key={i} to={item.path}>{item.text}</MyNavlink>)
                     }
                     {/* <MyNavlink to="/">Home</MyNavlink>
                     <MyNavlink to="/apps">Apps</MyNavlink>
