@@ -75,12 +75,12 @@ const Footer = () => {
                     
                     {/* Company Info */}
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2">
+                        <Link to="/" className="flex items-center gap-2">
                             <img src={logoImg} alt="Logo" className="h-10 w-auto" />
                             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
                                 HERO.IO
                             </span>
-                        </div>
+                        </Link>
                         <p className="text-purple-200 text-sm leading-relaxed">
                             Crafting innovative apps designed to make everyday life simpler, smarter, and more exciting. 
                             Turn your ideas into digital experiences that truly make an impact.

@@ -4,7 +4,7 @@ import logoImg from '../../assets/images/logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoLogoGithub } from 'react-icons/io';
 import { FaTimes, FaHome, FaDownload, FaUser, FaMoon, FaSun, FaGooglePlay } from 'react-icons/fa';
-import { MdInstallMobile } from 'react-icons/md';
+import { MdInstallMobile, MdSpaceDashboard } from 'react-icons/md';
 import MyNavlink from './MyNavlink';
 
 const Navbar = () => {
@@ -26,6 +26,11 @@ const Navbar = () => {
             path: "/installApps",
             text: "Installed",
             icon: <MdInstallMobile />
+        },
+        {
+            path: "/dashbord",
+            text: "Dashbord",
+            icon: <MdSpaceDashboard />
         }
     ];
 
@@ -60,10 +65,10 @@ const Navbar = () => {
                         </Link>
 
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center gap-1 lg:gap-2">
+                        <div className="hidden md:flex items-center gap-1 lg:gap-5">
                             {navItems.map((item, i) => (
                                 <MyNavlink key={i} to={item.path}>
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-1">
                                         {item.icon}
                                         {item.text}
                                     </div>
